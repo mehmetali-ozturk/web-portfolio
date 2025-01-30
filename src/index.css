@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles can be added below */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('/public/bg.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(50px);
+    -webkit-filter: blur(50px);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.glow {
+    color: #fff;
+    text-shadow: 0 0 1px #9ca3af, 0 0 2px #9ca3af, 0 0 3px #848a96, 0 0 4px #848a96;
+}
+
+.quote {
+    position: relative;
+    padding: 20px;
+    margin: 20px;
+}
+
+.quote::before {
+    content: '“';
+    font-size: 4rem;
+    color: #ccc;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+.quote::after {
+    content: '”';
+    font-size: 4rem;
+    color: #ccc;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+}
+
+:root {
+    --navbar-bg: rgba(0, 0, 0, 0.6); /* Koyu siyah, %60 opaklık */
+    --title-color: #FFFFFF; /* Beyaz */
+    --hover-color: #25B4D0; /* Altın Sarısı */
+    --paragraph-color: #B3B3B3; /* Açık Gri */
+    --background-color: #111111; /* Koyu Mavi */
+    --div-background: #1E1E1F; /* Koyu Gri */
+    --div-border: #2E2E2F; /* Açık Gri */
+    --div-inside: #2B2B2C; /* Açık Gri */
+    --color-twitter: #1DA1F2; /* Twitter Mavi */
+    --color-github: #333333; /* Github Siyah */
+    --color-linkedin: #0A66C2; /* Linkedin Mavi */
+    --color-instagram: #E4405F; /* Instagram Kırmızı */
+}
+
+.custom-bg {
+    background-color: var(--background-color);
+}
+
+.text-title {
+    color: var(--title-color);
+}
+
+.text-paragraph {
+    color: var(--paragraph-color);
+}
+
+.hover-highlight:hover {
+    color: var(--hover-color);
+}
+
+.text-title-2 {
+    color: var(--hover-color);
+    text-shadow: 0 0 2px var(--hover-color), 0 0 4px var(--hover-color);
+}
+
+.bg-navbar {
+    background-color: var(--navbar-bg);
+}
+
+.bg-div {
+    background-color: var(--div-background);
+}
+
+.border-div {
+    border: 2px solid var(--div-border);
+}
+
+.bg-div-inside {
+    background-color: var(--div-inside);
+}
+
+.bg-div-inside-2 {
+    background-color: var(--hover-color);
+}
+
+.border-gradient {
+    border-image: linear-gradient(to bottom right, #faffb4 0%, #ffffff00 50%) 1;
+    border-radius: 8px; 
+    border-width: 1px;
+    
+    padding: 5px;
+}
+
+.twitter-color:hover {
+    color: var(--color-twitter);
+    text-shadow: 0 0 4px var(--color-twitter), 0 0 8px var(--color-twitter);
+}
+
+.github-color:hover {
+    color: var(--color-github);
+    text-shadow: 0 0 4px var(--color-github), 0 0 8px var(--color-github);
+}
+
+.linkedin-color:hover {
+    color: var(--color-linkedin);
+    text-shadow: 0 0 4px var(--color-linkedin), 0 0 8px var(--color-linkedin);
+}
+
+.instagram-color {
+    color: var(--color-instagram);
+    text-shadow: 0 0 2px var(--color-instagram), 0 0 4px var(--color-instagram);
+}
+
+.div-shadow {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.div-shadow-inset {
+    box-shadow: 3px 3px 17px -3px rgba(120,120,120,1) inset;}
+
+.icon-color {
+    color: var(--hover-color);
+}
+
+::-webkit-scrollbar {
+    width: 8px;  /* reduced width */
+    height: 8px; /* consistent height */
+}
+  
+::-webkit-scrollbar-track {
+    background: #ffffff00;
+    margin: 10px; /* adds space around scrollbar */
+    padding: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: var(--hover-color);
+    border-radius: 4px;
+    max-height: 20px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #1E95AD;
+}
