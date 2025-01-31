@@ -16,6 +16,11 @@ const Navbar = () => {
                     `text-m font-medium text-gray-600 hover:text-custom-blue transition-colors duration-300 ${isActive ? 'text-custom-blue' : ''}`}>
                     Resume
                 </NavLink>
+                <NavLink to="/projects" 
+                    className={({ isActive }) => 
+                    `text-m font-medium text-gray-600 hover:text-custom-blue transition-colors duration-300 ${isActive ? 'text-custom-blue' : ''}`}>
+                    Projects
+                </NavLink>
                 <NavLink to="/contact"
                     className={({ isActive }) => 
                     `text-m font-medium text-gray-600 hover:text-custom-blue transition-colors duration-300 ${isActive ? 'text-custom-blue' : ''}`}>

@@ -5,6 +5,7 @@ import SideBar from './components/SideBar';
 import AboutMePage from './components/AboutMePage';
 import ResumePage from './components/ResumePage';
 import ContactPage from './components/ContactPage';
+import ProjectsPage from './components/ProjectsPage';
 
 
 function AppContent() {
@@ -38,6 +39,7 @@ function AppContent() {
             <Routes location={location}>
               <Route path="/" element={<AboutMePage />} />
               <Route path="/resume" element={<ResumePage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
               <Route path="/contact" element={<ContactPage />} />
             </Routes>
           </motion.div>

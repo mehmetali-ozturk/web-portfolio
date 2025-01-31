@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaPhone, FaCalendar, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaPhone, FaCalendar, FaMapMarkerAlt, FaInstagram } from 'react-icons/fa';
 
 
 // Bilgi kartlarını oluşturmak için InfoCard adında bir bileşen oluşturdum.
@@ -65,9 +65,9 @@ const SideBar = () => {
             </ul>
         </div>
         <div className="mt-auto flex justify-around w-full pt-4">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-black transition-all duration-500"><FaLinkedin size={24} /></a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-black transition-all duration-500"><FaGithub size={24} /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-black transition-all duration-500"><FaTwitter size={24} /></a>
+            <a href="https://www.linkedin.com/in/mehmet-ali-ozturk-/" target="_blank" rel="noopener noreferrer" className="text-black transition-all duration-500"><FaLinkedin size={24} /></a>
+            <a href="https://github.com/mehmetali-ozturk" target="_blank" rel="noopener noreferrer" className="text-black transition-all duration-500"><FaGithub size={24} /></a>
+            <a href="https://www.instagram.com/lahmacuncu.memo/" target="_blank" rel="noopener noreferrer" className="text-black transition-all duration-500"><FaInstagram size={24} /></a>
         </div>
     </div>
     );
