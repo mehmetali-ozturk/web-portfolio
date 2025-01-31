@@ -6,13 +6,14 @@ import AboutMePage from './components/AboutMePage';
 import ResumePage from './components/ResumePage';
 import ContactPage from './components/ContactPage';
 import ProjectsPage from './components/ProjectsPage';
+import MobileNav from './components/MobileNav';
 
 
 function AppContent() {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen h-full bg-white flex">
+    <div className="min-h-screen h-full m-10 my-16 bg-white flex flex-col lg:flex-row pb-16 lg:pb-0">
       <AnimatePresence mode="wait">
         <motion.div 
           key="sidebar"
@@ -20,7 +21,7 @@ function AppContent() {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -20 }}
           transition={{ duration: 0.5 }}
-          className="max-w-s"
+          className="lg:max-w-s  lg:min-h-screen"
         >
           <SideBar />
         </motion.div>
@@ -34,7 +35,7 @@ function AppContent() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="mr-20"
+            className="w-full"
           >
             <Routes location={location}>
               <Route path="/" element={<AboutMePage />} />
@@ -44,6 +45,7 @@ function AppContent() {
             </Routes>
           </motion.div>
         </AnimatePresence>
+        <MobileNav />
       </div>
     </div>
   );

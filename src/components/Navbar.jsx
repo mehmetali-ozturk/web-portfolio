@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav className="max-w-min self-end bg-white div-shadow-inset p-4 rounded-xl ">
+        <nav className="hidden lg:flex max-w-min self-end bg-white div-shadow-inset p-4 rounded-xl ">
             <div className="flex justify-center space-x-12">
                 <NavLink to="/" 
                     className={({ isActive }) => 

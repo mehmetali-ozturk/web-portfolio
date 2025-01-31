@@ -58,7 +58,7 @@ const AboutMePage = () => {
     ];
 
     return (
-        <div className="my-16 ml-5 mr-20 h-auto w-full flex flex-col bg-white text-black div-shadow rounded-2xl border-gray-300 p-7 font-poppins">
+        <div className="mr-50 h-auto w-full flex flex-col bg-white text-black div-shadow rounded-2xl border-gray-300 p-7 font-poppins">
             <div className='flex justify-between'>
                 <p className='text-4xl font-bold text-shadow-xl mt-3'>About Me</p>
                 <Navbar />
@@ -80,13 +80,13 @@ const AboutMePage = () => {
             <div className='mt-10'>
                 <h1 className='text-3xl font-bold m-2'>What I'm Doing</h1>
                 {/* Yetenek kartlarını oluşturmak için SkillCard bileşenini kullanıyorum. */}
-                <div className='grid grid-cols-2 gap-10'>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
                     {skills.map((skill, index) => (
                         <SkillCard 
-                            key={index}
-                            Icon={skill.Icon}
-                            title={skill.title}
-                            description={skill.description}
+                        key={index}
+                        Icon={skill.Icon}
+                        title={skill.title}
+                        description={skill.description}
                         />
                     ))}
                 </div>
