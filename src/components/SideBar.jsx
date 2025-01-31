@@ -72,13 +72,13 @@ const SideBar = () => {
                             ))}
                         </ul>
                         <div className="flex justify-center space-x-4 mt-4 pt-4 border-t">
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
+                            <a href="https://www.linkedin.com/in/mehmet-ali-ozturk-" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
                                 <FaLinkedin size={24} />
                             </a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
+                            <a href="https://github.com/mehmetali-ozturk" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
                                 <FaGithub size={24} />
                             </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
+                            <a href="https://instagram.com/lahmacuncu.memo" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
                                 <FaInstagram size={24} />
                             </a>
                         </div>
@@ -109,13 +109,13 @@ const SideBar = () => {
                     <div className='w-full h-0.5 m-10 bg-gray-200'></div>
                     
                     <div className="flex justify-around w-full">
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
+                        <a href="https://www.linkedin.com/in/mehmet-ali-ozturk-" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
                             <FaLinkedin size={24} />
                         </a>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
+                        <a href="https://github.com/mehmetali-ozturk" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
                             <FaGithub size={24} />
                         </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
+                        <a href="https://instagram.com/lahmacuncu.memo" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
                             <FaInstagram size={24} />
                         </a>
                     </div>
