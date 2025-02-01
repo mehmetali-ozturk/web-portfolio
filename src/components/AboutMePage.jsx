@@ -15,7 +15,7 @@ const SkillCard = ({ Icon, title, description }) => (
     </div>
 );
 
-// ...rest of your component remains the same
+
 const AboutMePage = () => {
     // InfoCard bileşenine göndereceğim verileri bu dizi içerisinde tutuyorum.
     const skills = [

@@ -2,23 +2,33 @@ import React, { useState } from 'react';
 import Navbar from './Navbar';
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const [status, setStatus] = useState('');
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    // Add form submission logic here
+    setStatus('sending');
+    
+    try {
+      const response = await fetch('https://formspree.io/f/xvgzrqbz', {
+        method: 'POST',
+        body: new FormData(e.target),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        e.target.reset(); // Clear the form
+        setStatus('success');
+        setTimeout(() => setStatus(''), 3000);
+      } else {
+        setStatus('error');
+        setTimeout(() => setStatus(''), 3000);
+      }
+    } catch (error) {
+      setStatus('error');
+      setTimeout(() => setStatus(''), 3000);
+    }
   };
 
   return (
@@ -38,8 +48,6 @@ const ContactPage = () => {
             type="text"
             id="name"
             name="name"
-            value={formData.name}
-            onChange={handleChange}
             required
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-blue focus:border-transparent outline-none transition-all duration-300"
             placeholder="Enter your name"
@@ -54,8 +62,6 @@ const ContactPage = () => {
             type="email"
             id="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
             required
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-blue focus:border-transparent outline-none transition-all duration-300"
             placeholder="Enter your email"
@@ -69,8 +75,6 @@ const ContactPage = () => {
           <textarea
             id="message"
             name="message"
-            value={formData.message}
-            onChange={handleChange}
             required
             rows="6"
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-blue focus:border-transparent outline-none transition-all duration-300 resize-none"
@@ -80,10 +84,22 @@ const ContactPage = () => {
 
         <button
           type="submit"
-          className="px-6 py-3 bg-custom-blue text-white rounded-lg hover:bg-opacity-90 transition-all duration-300 font-medium"
+          disabled={status === 'sending'}
+          className={`px-6 py-3 bg-custom-blue text-white rounded-lg hover:bg-opacity-90 transition-all duration-300 font-medium ${status === 'sending' ? 'opacity-70 cursor-not-allowed' : ''}`}
         >
-          Send Message
+          {status === 'sending' ? 'Sending...' : 'Send Message'}
         </button>
+
+        {status === 'success' && (
+          <div className="p-4 bg-green-100 text-green-700 rounded-lg">
+            Message sent successfully! 🎉
+          </div>
+        )}
+        {status === 'error' && (
+          <div className="p-4 bg-red-100 text-red-700 rounded-lg">
+            Oops! Something went wrong. Please try again.
+          </div>
+        )}
       </form>
     </div>
   );
