@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaPhone, FaCalendar, FaMapMarkerAlt, FaInstagram, FaChevronDown, FaChevronUp } from 'react-icons/fa';
-
+import { motion, AnimatePresence } from 'framer-motion';
 const InfoCard = ({ Icon, title, text }) => (
     <li className='flex items-center mb-8'>
         <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-gray-100 rounded-lg mr-4 div-shadow-inset">
@@ -43,47 +43,60 @@ const SideBar = () => {
         <>
             {/* Mobile View */}
             <div className="lg:hidden w-full bg-white div-shadow rounded-2xl border-gray-300 p-4 mb-5">
-                <div className="flex items-center space-x-4">
-                    <img src='/pp.png' alt="Mehmet Ali Öztürk" 
-                        className="w-16 h-16 rounded-2xl bg-gray-100 p-2" />
-                    <div>
-                        <h1 className="text-xl font-bold">Mehmet Ali Öztürk</h1>
-                        <p className="text-sm bg-gray-100 rounded-lg px-3 py-1 mt-1">Software Engineer</p>
+                <div className="flex items-center  justify-between">
+                    <div className='flex items-center space-x-4'>
+                        <img src='/pp.png' alt="Mehmet Ali Öztürk" 
+                            className="w-16 h-16 rounded-2xl bg-gray-100 p-2" />
+                        <div>
+                            <h1 className="text-xl font-bold">Mehmet Ali Öztürk</h1>
+                            <p className="text-sm bg-gray-100 rounded-lg px-3 py-1 mt-1 max-w-max">Software Engineer</p>
+                        </div>
                     </div>
                     <button 
                         onClick={() => setIsOpen(!isOpen)}
-                        className="ml-auto p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                        className="ml-0 p-2 hover:bg-gray-100 rounded-lg transition-colors div-shadow-inset" 
                     >
                         {isOpen ? <FaChevronUp /> : <FaChevronDown />}
                     </button>
                 </div>
                 
                 {/* Mobile Dropdown */}
-                {isOpen && (
-                    <div className="mt-4 border-t pt-4">
-                        <ul className="space-y-4">
-                            {contactInfo.map((info, index) => (
-                                <InfoCard 
-                                    key={index}
-                                    Icon={info.Icon}
-                                    title={info.title}
-                                    text={info.text}
-                                />
-                            ))}
-                        </ul>
-                        <div className="flex justify-center space-x-4 mt-4 pt-4 border-t">
-                            <a href="https://www.linkedin.com/in/mehmet-ali-ozturk-" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
-                                <FaLinkedin size={24} />
-                            </a>
-                            <a href="https://github.com/mehmetali-ozturk" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
-                                <FaGithub size={24} />
-                            </a>
-                            <a href="https://instagram.com/lahmacuncu.memo" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
-                                <FaInstagram size={24} />
-                            </a>
-                        </div>
-                    </div>
-                )}
+                
+                <AnimatePresence>
+                    {isOpen && (
+                        <motion.div 
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="overflow-hidden"
+                        >
+                            <div className="mt-4 border-t pt-4">
+                                <ul className="space-y-4">
+                                    {contactInfo.map((info, index) => (
+                                        <InfoCard 
+                                            key={index}
+                                            Icon={info.Icon}
+                                            title={info.title}
+                                            text={info.text}
+                                        />
+                                    ))}
+                                </ul>
+                                <div className="flex justify-center space-x-4 mt-4 pt-4 border-t">
+                                    <a href="https://www.linkedin.com/in/mehmet-ali-ozturk-" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
+                                    <FaLinkedin size={24} />
+                                    </a>
+                                    <a href="https://github.com/mehmetali-ozturk" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
+                                        <FaGithub size={24} />
+                                    </a>
+                                    <a href="https://instagram.com/lahmacuncu.memo" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
+                                        <FaInstagram size={24} />
+                                    </a>
+                                </div>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
 
             {/* Desktop View */}

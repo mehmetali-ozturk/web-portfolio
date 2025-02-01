@@ -32,7 +32,7 @@ const ResumePage = () => {
           <FaCode className="text-2xl text-custom-blue mr-2" />
           <h2 className="text-2xl font-bold">Technical Skills</h2>
         </div>
-        <div className="ml-8 grid grid-cols-2 gap-4">
+        <div className="ml-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
           <div>
             <h3 className="font-semibold mb-2">Programming Languages</h3>
             <div className="space-y-2">
@@ -61,7 +61,7 @@ const ResumePage = () => {
           <FaLanguage className="text-2xl text-custom-blue mr-2" />
           <h2 className="text-2xl font-bold">Languages</h2>
         </div>
-        <div className="ml-8 grid grid-cols-2 gap-4">
+        <div className="ml-8 grid grid-cols-1 lg:grid-cols-2 gap-4">
           <SkillBar skill="Turkish (Native)" percentage={100} />
           <SkillBar skill="English" percentage={85} />
         </div>

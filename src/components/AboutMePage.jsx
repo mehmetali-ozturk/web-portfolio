@@ -25,11 +25,6 @@ const AboutMePage = () => {
             description: 'Design and develop responsive, user-friendly websites and web apps.'
         },
         {
-            Icon: FaGamepad,
-            title: 'Game Development',
-            description: 'Create engaging games using Unity and optimize gameplay.'
-        },
-        {
             Icon: FaDatabase,
             title: 'Database Management',
             description: 'Design, optimize databases, and write SQL queries for efficient data handling.'
@@ -38,6 +33,11 @@ const AboutMePage = () => {
             Icon: FaCode,
             title: 'Software Development & Architecture',
             description: 'Develop scalable software solutions using best architecture practices.'
+        },
+        {
+            Icon: FaGamepad,
+            title: 'Game Development',
+            description: 'Create engaging games using Unity and optimize gameplay.'
         },
         {
             Icon: FaClipboardCheck,
@@ -60,24 +60,22 @@ const AboutMePage = () => {
     return (
         <div className="mr-50 h-auto w-full flex flex-col bg-white text-black div-shadow rounded-2xl border-gray-300 p-7 font-poppins">
             <div className='flex justify-between'>
-                <p className='text-4xl font-bold text-shadow-xl mt-3'>About Me</p>
+                <p className='lg:text-4xl text-3xl font-bold text-shadow-xl mt-3'>About Me</p>
                 <Navbar />
             </div>
             <div>
                 
                 <div className='w-10 h-1.5 mb-4 mt-6 bg-custom-blue rounded'></div>
-                <p className='py-1 mb-2 text-shadow-lg'>
-                    Hi, I'm Mehmet Ali Öztürk, a passionate Software Engineering student at Altınbaş University with a keen interest in creating innovative digital solutions. My journey in technology began with curiosity and has grown into a lifelong pursuit of learning and development.
+                <p className='py-1 mb-2 text-shadow-lg text-sm lg:text-lg'>
+                Hey! I'm Mehmet Ali Öztürk, a Software Engineering student at Altınbaş University driven by a passion for creating innovative digital solutions.
                 </p>
-                <p className='py-1 mb-2 text-shadow-lg'>
-                    I specialize in Java, HTML, CSS, React, and C, and I'm currently diving deeper into React and Tailwind CSS to build modern, responsive web applications. My focus is on crafting user-friendly interfaces and robust backend systems, blending creativity with problem-solving to deliver impactful projects.
+                <p className='py-1 mb-2 text-shadow-lg text-sm lg:text-lg'>
+                I specialize in building modern web applications that blend user-friendly interfaces with solid backend systems. Always learning and growing, I'm committed to crafting impactful projects that push boundaries.
                 </p>
-                <p className='py-1 mb-2 text-shadow-lg'>
-                    Beyond coding, I'm constantly pushing myself to learn new technologies and refine my skills. My current goal is to master ReactJS and create a professional portfolio showcasing my work.
-                </p>
+
             </div> 
             
-            <div className='mt-10'>
+            <div className='mt-5'>
                 <h1 className='text-3xl font-bold m-2'>What I'm Doing</h1>
                 {/* Yetenek kartlarını oluşturmak için SkillCard bileşenini kullanıyorum. */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">

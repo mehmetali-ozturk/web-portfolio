@@ -13,7 +13,7 @@ function AppContent() {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen h-full m-10 my-16 bg-white flex flex-col lg:flex-row pb-16 lg:pb-0">
+    <div className="min-h-screen h-full lg:m-10 m-5 lg:my-16 my-5 bg-white flex flex-col lg:flex-row pb-16 lg:pb-0">
       <AnimatePresence mode="wait">
         <motion.div 
           key="sidebar"
@@ -27,7 +27,7 @@ function AppContent() {
         </motion.div>
       </AnimatePresence>
 
-      <div className="flex-1 relative">
+      <div className="flex-1 relative ">
         <AnimatePresence mode="wait">
           <motion.div 
             key={location.pathname}
