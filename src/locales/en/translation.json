@@ -1,0 +1,137 @@
+{
+    "about": {
+      "title": "About Me",
+      "description1": "I am a passionate software developer with experience in various technologies and frameworks. I love creating innovative solutions and learning new technologies.",
+      "description2": "My goal is to develop high-quality, scalable applications that provide real value to users while continuously improving my skills and knowledge in the field.",
+      "whatImDoing": "What I'm Doing",
+      "skills": {
+        "webDev": "Web Development",
+        "database": "Database Management",
+        "softwareDev": "Software Development & Architecture",
+        "gameDev": "Game Development",
+        "testing": "Software Testing",
+        "algorithms": "Algorithms & Problem Solving"
+      },
+      "skillDescriptions": {
+        "webDev": "Design and develop responsive, user-friendly websites and web apps.",
+        "database": "Design, optimize databases, and write SQL queries for efficient data handling.",
+        "softwareDev": "Develop scalable software solutions using best architecture practices.",
+        "gameDev": "Create engaging games using Unity and optimize gameplay.",
+        "testing": "Implement testing strategies to ensure app quality and minimize bugs.",
+        "algorithms": "Design efficient algorithms focused on performance and scalability."
+        }
+    },
+    
+    "contact": {
+    "title": "Contact",
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Enter your message"
+      },
+      "button": {
+        "sending": "Sending...",
+        "send": "Send Message"
+      },
+      "status": {
+        "success": "Message sent successfully! 🎉",
+        "error": "Oops! Something went wrong. Please try again."
+      }
+    }
+  },  "projects": {
+    "title": "Projects",
+    "portfolioProject": {
+      "title": "Personal Portfolio",
+      "description": "A responsive portfolio website built using React and Tailwind CSS, featuring smooth animations and modern design.",
+      "technologies": {
+        "react": "React",
+        "tailwind": "Tailwind CSS",
+        "framer": "Framer Motion"
+      }
+    }
+  },
+  "resume": {
+    "title": "Resume",
+    "education": {
+      "title": "Education",
+      "university": {
+        "name": "Altınbaş University",
+        "department": "Software Engineering",
+        "period": "2023 - Present"
+      }
+    },
+    "technicalSkills": {
+      "title": "Technical Skills",
+      "programmingLanguages": {
+        "title": "Programming Languages",
+        "skills": {
+          "react": "React",
+          "htmlCss": "HTML/CSS",
+          "java": "Java",
+          "javascript": "JavaScript",
+          "c": "C"
+        }
+      },
+      "otherSkills": {
+        "title": "Other Skills",
+        "skills": {
+          "git": "Git",
+          "sql": "SQL",
+          "tailwind": "Tailwind CSS",
+          "nodejs": "Node.js"
+        }
+      }
+    },
+    "languages": {
+      "title": "Languages",
+      "turkish": "Turkish (Native)",
+      "english": "English"
+    },
+    "certificates": {
+      "title": "Certificates",
+      "webDev": {
+        "title": "Web Development Bootcamp",
+        "institution": "Udemy",
+        "year": "2023"
+      }
+    }
+  },
+  "personalInfo": {
+    "name": "Mehmet Ali Öztürk",
+    "title": "Software Engineer",
+    "contact": {
+      "email": {
+        "label": "EMAIL",
+        "value": "mehmetali.ozturk@hotmail.com"
+      },
+      "phone": {
+        "label": "PHONE",
+        "value": "+90 (544) 616 5198"
+      },
+      "birthday": {
+        "label": "BIRTHDAY",
+        "value": "July 16, 2005"
+      },
+      "location": {
+        "label": "LOCATION",
+        "value": "Istanbul, Turkey"
+      }
+    }
+  },
+  "navbar": {
+    "about": "About",
+    "projects": "Projects",
+    "resume": "Resume",
+    "contact": "Contact"
+  }
+}
+
+  

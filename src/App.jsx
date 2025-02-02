@@ -7,13 +7,23 @@ import ResumePage from './components/ResumePage';
 import ContactPage from './components/ContactPage';
 import ProjectsPage from './components/ProjectsPage';
 import MobileNav from './components/MobileNav';
+import { useTranslation } from 'react-i18next';
+import { FaTurkishLira, FaGlobeEurope } from 'react-icons/fa';
+import './i18n';
 
 
 function AppContent() {
   const location = useLocation();
+  const { i18n } = useTranslation();
 
   return (
     <div className="min-h-screen h-full lg:m-10 m-5 lg:my-16 my-5 bg-white flex flex-col lg:flex-row pb-16 lg:pb-0">
+      <button 
+        onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'tr' : 'en')}
+        className="fixed top-4 right-4 z-50 p-2 bg-white rounded-lg div-shadow"
+      >
+        {i18n.language === 'en' ? 'TR' : 'EN'}
+      </button>
       <AnimatePresence mode="wait">
         <motion.div 
           key="sidebar"

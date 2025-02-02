@@ -1,0 +1,136 @@
+{
+    "about": {
+      "title": "Hakkımda",
+      "description1": "Çeşitli teknolojiler ve frameworkler konusunda deneyime sahip tutkulu bir yazılım geliştiricisiyim. Yenilikçi çözümler üretmeyi ve yeni teknolojiler öğrenmeyi seviyorum.",
+      "description2": "Amacım, kullanıcılara gerçek değer sağlayan, yüksek kaliteli ve ölçeklenebilir uygulamalar geliştirirken alandaki beceri ve bilgilerimi sürekli geliştirmektir.",
+      "whatImDoing": "Neler Yapıyorum",
+      "skills": {
+        "webDev": "Web Geliştirme",
+        "database": "Veritabanı Yönetimi",
+        "softwareDev": "Yazılım Geliştirme & Mimari",
+        "gameDev": "Oyun Geliştirme",
+        "testing": "Yazılım Testi",
+        "algorithms": "Algoritmalar & Problem Çözme"
+      },
+      "skillDescriptions": {
+        "webDev": "Duyarlı ve kullanıcı dostu web siteleri ve web uygulamaları tasarlayıp geliştirme.",
+        "database": "Veritabanları tasarlama, optimize etme ve verimli veri işleme için SQL sorguları yazma.",
+        "softwareDev": "En iyi mimari uygulamaları kullanarak ölçeklenebilir yazılım çözümleri geliştirme.",
+        "gameDev": "Unity kullanarak ilgi çekici oyunlar oluşturma ve oynanışı optimize etme.",
+        "testing": "Uygulama kalitesini sağlamak ve hataları en aza indirmek için test stratejileri uygulama.",
+        "algorithms": "Performans ve ölçeklenebilirliğe odaklanan verimli algoritmalar tasarlama."
+      }
+    },
+    "contact": {
+      "title": "İletişim",
+      "form": {
+        "name": {
+          "label": "İsim",
+          "placeholder": "İsminizi giriniz"
+        },
+        "email": {
+          "label": "E-posta",
+          "placeholder": "E-posta adresinizi giriniz"
+        },
+        "message": {
+          "label": "Mesaj",
+          "placeholder": "Mesajınızı giriniz"
+        },
+        "button": {
+          "sending": "Gönderiliyor...",
+          "send": "Mesaj Gönder"
+        },
+        "status": {
+          "success": "Mesaj başarıyla gönderildi! 🎉",
+          "error": "Ops! Bir şeyler yanlış gitti. Lütfen tekrar deneyin."
+        }
+      }
+    },
+    
+        "projects": {
+          "title": "Projeler",
+          "portfolioProject": {
+            "title": "Kişisel Portfolyo",
+            "description": "React ve Tailwind CSS kullanılarak oluşturulmuş, akıcı animasyonlar ve modern tasarım içeren responsive bir portfolyo web sitesi.",
+            "technologies": {
+              "react": "React",
+              "tailwind": "Tailwind CSS",
+              "framer": "Framer Motion"
+            }
+          }
+        }
+        ,"resume": {
+    "title": "Özgeçmiş",
+    "education": {
+      "title": "Eğitim",
+      "university": {
+        "name": "Altınbaş Üniversitesi",
+        "department": "Yazılım Mühendisliği",
+        "period": "2023 - Devam Ediyor"
+      }
+    },
+    "technicalSkills": {
+      "title": "Teknik Yetenekler",
+      "programmingLanguages": {
+        "title": "Programlama Dilleri",
+        "skills": {
+          "react": "React",
+          "htmlCss": "HTML/CSS",
+          "java": "Java",
+          "javascript": "JavaScript",
+          "c": "C"
+        }
+      },
+      "otherSkills": {
+        "title": "Diğer Yetenekler",
+        "skills": {
+          "git": "Git",
+          "sql": "SQL",
+          "tailwind": "Tailwind CSS",
+          "nodejs": "Node.js"
+        }
+      }
+    },
+    "languages": {
+      "title": "Diller",
+      "turkish": "Türkçe (Ana Dil)",
+      "english": "İngilizce"
+    },
+    "certificates": {
+      "title": "Sertifikalar",
+      "webDev": {
+        "title": "Web Geliştirme Bootcamp",
+        "institution": "Udemy",
+        "year": "2023"
+      }
+    }
+  },
+  "personalInfo": {
+    "name": "Mehmet Ali Öztürk",
+    "title": "Yazılım Mühendisi",
+    "contact": {
+      "email": {
+        "label": "E-POSTA",
+        "value": "mehmetali.ozturk@hotmail.com"
+      },
+      "phone": {
+        "label": "TELEFON",
+        "value": "+90 (544) 616 5198"
+      },
+      "birthday": {
+        "label": "DOĞUM GÜNÜ",
+        "value": "16 Temmuz 2005"
+      },
+      "location": {
+        "label": "KONUM",
+        "value": "İstanbul, Türkiye"
+      }
+    }
+  },
+  "navbar": {
+    "about": "Hakkımda",
+    "resume": "Özgeçmiş",
+    "projects": "Projeler",
+    "contact": "İletişim"
+  }
+}
