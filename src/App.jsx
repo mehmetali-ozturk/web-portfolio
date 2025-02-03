@@ -26,7 +26,7 @@ function AppContent() {
   };
 
   return (
-    <div className={`min-h-screen h-full lg:m-10 p-5 lg:py-16 my-5 bg-white flex flex-col lg:flex-row pb-16 lg:pb-0  bg-transparent transition-colors duration-300`}>
+    <div className={`min-h-screen h-full lg:m-10 p-5 lg:py-16 my-5 flex flex-col lg:flex-row pb-16 lg:pb-0  bg-transparent transition-colors duration-300`}>
       <div className="fixed top-4 right-4 z-50 flex space-x-2 bg-transparent transition-colors duration-300">
         <button 
           onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'tr' : 'en')}
