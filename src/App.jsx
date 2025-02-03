@@ -26,17 +26,17 @@ function AppContent() {
   };
 
   return (
-    <div className={`min-h-screen h-full lg:m-10 m-5 lg:my-16 my-5 bg-white dark: flex flex-col lg:flex-row pb-16 lg:pb-0`}>
-      <div className="fixed top-4 right-4 z-50 flex space-x-2">
+    <div className={`min-h-screen h-full lg:m-10 p-5 lg:py-16 my-5 bg-white flex flex-col lg:flex-row pb-16 lg:pb-0  bg-transparent transition-colors duration-300`}>
+      <div className="fixed top-4 right-4 z-50 flex space-x-2 bg-transparent transition-colors duration-300">
         <button 
           onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'tr' : 'en')}
-          className="p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg text-xs dark:text-white"
+          className="p-2 bg-white dark:bg-custom-gray-2 rounded-lg shadow-lg text-xs dark:text-white transition-colors duration-300"
         >
           {i18n.language === 'en' ? 'TR' : 'EN'}
         </button>
         <button 
           onClick={toggleDarkMode}
-          className="p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg "
+          className="p-2 bg-white dark:bg-custom-gray-2 rounded-lg shadow-lg transition-colors duration-300"
         >
           {darkMode ? <FaSun className="text-yellow-500" /> : <FaMoon className="text-gray-500" />}
         </button>
@@ -48,7 +48,7 @@ function AppContent() {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -20 }}
           transition={{ duration: 0.5 }}
-          className="lg:max-w-s lg:min-h-screen"
+          className="lg:max-w-s lg:min-h-screen bg-transparent transition-colors duration-300;"
         >
           <SideBar />
         </motion.div>
@@ -62,7 +62,7 @@ function AppContent() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="w-full lg:mr-20"
+            className="w-full lg:mr-20 bg-transparent transition-colors duration-300;"
           >
             <Routes location={location}>
               <Route path="/" element={<AboutMePage />} />

@@ -10,6 +10,7 @@ module.exports = {
         colors: {
           'custom-blue': '#25B4D0',
           'custom-gray': '#1e1e1f',
+          'custom-gray-2': '#333333',
           'custom-bg': '#f5f5f5',
         },
         textShadow: {

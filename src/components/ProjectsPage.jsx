@@ -15,20 +15,20 @@ const ProjectsPage = () => {
       <div className='w-10 h-1.5 mb-4 mt-6 bg-custom-blue rounded '></div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-        <div className="p-6 rounded-lg  dark:text-white transition-colors duration-300 ">
+        <div className="p-6 rounded-lg  dark:text-white transition-colors duration-300 card dark:bg-custom-gray ">
           
           <h3 className="text-xl font-semibold mb-2">{t('projects.portfolioProject.title')}</h3>
           <p className="text-gray-600 mb-4 dark:text-gray-300 transition-colors duration-300 ">
             {t('projects.portfolioProject.description')}
           </p>
           <div className="flex flex-wrap gap-2 mb-4 ">
-            <span className="px-3 py-1 text-sm bg-gray-100 rounded-full text-gray-700 dark:bg-gray-800 dark:text-gray-300 transition-colors duration-300 ">
+            <span className="px-3 py-1 text-sm bg-gray-100 rounded-full text-gray-700 dark:bg-custom-gray-2 dark:text-gray-300 transition-colors duration-300 ">
               {t('projects.portfolioProject.technologies.react')}
             </span>
-            <span className="px-3 py-1 text-sm bg-gray-100 rounded-full text-gray-700 dark:bg-gray-800 dark:text-gray-300 transition-colors duration-300 ">
+            <span className="px-3 py-1 text-sm bg-gray-100 rounded-full text-gray-700 dark:bg-custom-gray-2 dark:text-gray-300 transition-colors duration-300 ">
               {t('projects.portfolioProject.technologies.tailwind')}
             </span>
-            <span className="px-3 py-1 text-sm bg-gray-100 rounded-full text-gray-700 dark:bg-gray-800 dark:text-gray-300 transition-colors duration-300 ">
+            <span className="px-3 py-1 text-sm bg-gray-100 rounded-full text-gray-700 dark:bg-custom-gray-2 dark:text-gray-300 transition-colors duration-300 ">
               {t('projects.portfolioProject.technologies.framer')}
             </span>
           </div>
