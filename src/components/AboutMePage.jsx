@@ -4,13 +4,13 @@ import Navbar from './Navbar';
 import { useTranslation } from 'react-i18next';
 
 const SkillCard = ({ Icon, title, description }) => (
-    <div className='flex items-center p-6 rounded-lg bg-white hover:bg-gray-50 transition-all duration-300 div-shadow-inset'>
+    <div className='flex items-center p-6 rounded-lg bg-white hover:bg-gray-50 card transition-all duration-300 dark:bg-custom-gray'>
         <div className="min-w-[60px] mr-6">
             <Icon className="text-4xl text-custom-blue hover:text-gray-700 transition-colors duration-300" />
         </div>
         <div>
-            <h2 className='text-lg font-bold mb-2'>{title}</h2>
-            <p className='text-sm font-medium text-gray-800'>{description}</p>
+            <h2 className='text-lg font-bold mb-2 dark:text-white'>{title}</h2>
+            <p className='text-sm font-medium text-gray-800 dark:text-white'>{description}</p>
         </div>
     </div>
 );
@@ -52,23 +52,23 @@ const AboutMePage = () => {
     ];
 
     return (
-        <div className="mr-50 h-auto w-full flex flex-col bg-white text-black div-shadow rounded-2xl border-gray-300 p-7 font-poppins">
+        <div className="base-container dark:bg-custom-gray transition-colors duration-300">
             <div className='flex justify-between'>
-                <p className='lg:text-4xl text-3xl font-bold text-shadow-xl mt-3'>{t("about.title")}</p>
+                <p className='lg:text-4xl text-3xl font-bold text-shadow-xl mt-3 dark:text-white'>{t("about.title")}</p>
                 <Navbar />
             </div>
             <div>
                 <div className='w-10 h-1.5 mb-4 mt-6 bg-custom-blue rounded'></div>
-                <p className='py-1 mb-2 text-shadow-lg text-sm lg:text-lg'>
+                <p className='py-1 mb-2 text-shadow-lg text-sm lg:text-lg dark:text-white'>
                     {t("about.description1")}
                 </p>
-                <p className='py-1 mb-2 text-shadow-lg text-sm lg:text-lg'>
+                <p className='py-1 mb-2 text-shadow-lg text-sm lg:text-lg dark:text-white'>
                     {t("about.description2")}
                 </p>
             </div>
             
             <div className='mt-5'>
-                <h1 className='text-3xl font-bold m-2'>{t("about.whatImDoing")}</h1>
+                <h1 className='text-3xl font-bold m-2 dark:text-white'>{t("about.whatImDoing")}</h1>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
                     {skills.map((skill, index) => (
                         <SkillCard 

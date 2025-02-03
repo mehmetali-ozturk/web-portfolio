@@ -42,19 +42,40 @@ body {
 }
 
 :root {
-    --navbar-bg: rgba(0, 0, 0, 0.6); /* Koyu siyah, %60 opaklık */
-    --title-color: #FFFFFF; /* Beyaz */
-    --hover-color: #25B4D0; /* Altın Sarısı */
-    --paragraph-color: #B3B3B3; /* Açık Gri */
-    --background-color: #111111; /* Koyu Mavi */
-    --div-background: #1E1E1F; /* Koyu Gri */
-    --div-border: #2E2E2F; /* Açık Gri */
-    --div-inside: #2B2B2C; /* Açık Gri */
-    --color-twitter: #1DA1F2; /* Twitter Mavi */
-    --color-github: #333333; /* Github Siyah */
-    --color-linkedin: #0A66C2; /* Linkedin Mavi */
-    --color-instagram: #E4405F; /* Instagram Kırmızı */
-}
+    /* Light Mode Colors */
+    --primary: #25B4D0;
+    --primary-hover: #1E8FA6;
+    --background: #FFFFFF;
+    --text: #1F2937;
+    --text-secondary: #4B5563;
+    --surface: #F3F4F6;
+    --border: #E5E7EB;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --accent: #FFA500;
+  }
+  
+  [data-theme='dark'] {
+    /* Dark Mode Colors */
+    --primary: #2CCCE4;
+    --primary-hover: #25B4D0;
+    --background: #111827;
+    --text: #F9FAFB;
+    --text-secondary: #D1D5DB;
+    --surface: #1F2937;
+    --border: #374151;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --accent: #FFB627;
+  }
+  
+  
+
+  
+  /* Theme Utility Classes */
+  .bg-background { background-color: var(--background); }
+  .bg-surface { background-color: var(--surface); }
+  .text-primary { color: var(--primary); }
+  .text-secondary { color: var(--text-secondary); }
+  .border-theme { border-color: var(--border); }
 
 .custom-bg {
     background-color: var(--background-color);
@@ -135,6 +156,22 @@ body {
 .icon-color {
     color: var(--hover-color);
 }
+.card {
+    box-sizing: border-box;
+    
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    transition: all 0.5s;
+  }
+  
+  .card:hover {
+    border: 1px solid black;
+    transform: scale(1.02);
+  }
+  
 
 ::-webkit-scrollbar {
     width: 8px;  /* reduced width */
@@ -155,4 +192,15 @@ body {
   
 ::-webkit-scrollbar-thumb:hover {
     background: #1E95AD;
+}
+
+    
+@layer components {
+    .base-container{
+        @apply h-auto w-full flex flex-col bg-white text-black div-shadow rounded-2xl border-gray-300 p-7 font-poppins;
+    }
+    .skills-dark{
+        @apply dark:bg-[div-background] dark:text-white;
+
+    }
 }

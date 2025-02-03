@@ -22,9 +22,9 @@ const ResumePage = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="mr-50 h-auto w-full flex flex-col bg-white text-black div-shadow rounded-2xl border-gray-300 p-7 font-poppins">
+    <div className="base-container dark:bg-custom-gray transition-colors duration-300">
       <div className='flex justify-between'>
-        <h1 className="text-4xl font-bold mt-3 text-shadow-xl">{t('resume.title')}</h1>
+        <h1 className="text-4xl font-bold mt-3 text-shadow-xl dark:text-white transition-colors duration-300 ">{t('resume.title')}</h1>
         <Navbar />
       </div>
       <div className='w-10 h-1.5 mb-4 mt-6 bg-custom-blue rounded'></div>
@@ -33,13 +33,13 @@ const ResumePage = () => {
       <div className="mb-8">
         <div className="flex items-center mb-4">
           <FaGraduationCap className="text-2xl text-custom-blue mr-2" />
-          <h2 className="text-2xl font-bold">{t('resume.education.title')}</h2>
+          <h2 className="text-2xl font-bold dark:text-white transition-colors duration-300 ">{t('resume.education.title')}</h2>
         </div>
         <div className="ml-8 border-l-2 border-custom-blue pl-4">
           <div className="mb-4">
-            <h3 className="text-xl font-semibold">{t('resume.education.university.name')}</h3>
-            <p className="text-gray-600">{t('resume.education.university.department')}</p>
-            <p className="text-gray-500">{t('resume.education.university.period')}</p>
+            <h3 className="text-xl font-semibold dark:text-white transition-colors duration-300 ">{t('resume.education.university.name')}</h3>
+            <p className="text-gray-600 dark:text-gray-300 transition-colors duration-300 ">{t('resume.education.university.department')}</p>
+            <p className="text-gray-500 dark:text-gray-400 transition-colors duration-300 ">{t('resume.education.university.period')}</p>
           </div>
         </div>
       </div>
@@ -48,9 +48,9 @@ const ResumePage = () => {
       <div className="mb-8">
         <div className="flex items-center mb-4">
           <FaCode className="text-2xl text-custom-blue mr-2" />
-          <h2 className="text-2xl font-bold">{t('resume.technicalSkills.title')}</h2>
+          <h2 className="text-2xl font-bold dark:text-white transition-colors duration-300 ">{t('resume.technicalSkills.title')}</h2>
         </div>
-        <div className="ml-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <div className="ml-8 grid grid-cols-1 gap-4 lg:grid-cols-2 dark:text-white transition-colors duration-300 ">
           <div>
             <h3 className="font-semibold mb-2">{t('resume.technicalSkills.programmingLanguages.title')}</h3>
             <div className="space-y-2">
@@ -74,7 +74,7 @@ const ResumePage = () => {
       </div>
 
       {/* Diller */}
-      <div className="mb-8">
+      <div className="mb-8 dark:text-white transition-colors duration-300 ">
         <div className="flex items-center mb-4">
           <FaLanguage className="text-2xl text-custom-blue mr-2" />
           <h2 className="text-2xl font-bold">{t('resume.languages.title')}</h2>
@@ -87,14 +87,14 @@ const ResumePage = () => {
 
       {/* Sertifikalar */}
       <div className="mb-8">
-        <div className="flex items-center mb-4">
+        <div className="flex items-center mb-4 dark:text-white transition-colors duration-300 ">
           <FaCertificate className="text-2xl text-custom-blue mr-2" />
           <h2 className="text-2xl font-bold">{t('resume.certificates.title')}</h2>
         </div>
         <div className="ml-8 space-y-4">
           <div>
-            <h3 className="font-semibold">{t('resume.certificates.webDev.title')}</h3>
-            <p className="text-gray-600">{t('resume.certificates.webDev.institution')} ({t('resume.certificates.webDev.year')})</p>
+            <h3 className="font-semibold dark:text-white transition-colors duration-300 ">{t('resume.certificates.webDev.title')}</h3>
+            <p className="text-gray-600 dark:text-gray-300 transition-colors duration-300 ">{t('resume.certificates.webDev.institution')} ({t('resume.certificates.webDev.year')})</p>
           </div>
         </div>
       </div>

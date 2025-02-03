@@ -34,16 +34,16 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="mr-50 h-auto w-full flex flex-col bg-white text-black div-shadow rounded-2xl border-gray-300 p-7 font-poppins">
+    <div className="base-container dark:bg-custom-gray transition-colors duration-300">
       <div className='flex justify-between'>
-        <h1 className="text-4xl font-bold mt-3 text-shadow-xl">{t('contact.title')}</h1>
+        <h1 className="text-4xl font-bold mt-3 text-shadow-xl dark:text-white transition-colors duration-300 ">{t('contact.title')}</h1>
         <Navbar />
       </div>
       <div className='w-10 h-1.5 mb-4 mt-6 bg-custom-blue rounded'></div>
       
       <form onSubmit={handleSubmit} className="mt-8 space-y-6 max-w-2xl">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2 dark:text-gray-300 transition-colors duration-300 ">
             {t('contact.form.name.label')}
           </label>
           <input
@@ -51,13 +51,13 @@ const ContactPage = () => {
             id="name"
             name="name"
             required
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-blue focus:border-transparent outline-none transition-all duration-300"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-blue focus:border-transparent outline-none dark:bg-custom-gray dark:border-gray-700 dark:text-white   transition-all duration-300"
             placeholder={t('contact.form.name.placeholder')}
           />
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2 dark:text-gray-300 transition-colors duration-300">
             {t('contact.form.email.label')}
           </label>
           <input
@@ -65,13 +65,13 @@ const ContactPage = () => {
             id="email"
             name="email"
             required
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-blue focus:border-transparent outline-none transition-all duration-300"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-blue focus:border-transparent outline-none dark:bg-custom-gray dark:border-gray-700 dark:text-white   transition-all duration-300"
             placeholder={t('contact.form.email.placeholder')}
           />
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2 dark:text-gray-300 transition-colors duration-300">
             {t('contact.form.message.label')}
           </label>
           <textarea
@@ -79,7 +79,7 @@ const ContactPage = () => {
             name="message"
             required
             rows="6"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-blue focus:border-transparent outline-none transition-all duration-300 resize-none"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-blue focus:border-transparent outline-none dark:bg-custom-gray dark:border-gray-700 transition-all duration-300 dark:text-white resize-none"
             placeholder={t('contact.form.message.placeholder')}
           />
         </div>

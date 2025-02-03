@@ -46,7 +46,7 @@ const SideBar = () => {
     return (
         <>
             {/* Mobile View */}
-            <div className="lg:hidden w-full bg-white div-shadow rounded-2xl border-gray-300 p-4 mb-5">
+            <div className="lg:hidden w-full bg-white div-shadow rounded-2xl border-gray-300 p-4 mb-5 dark:custom-bg">
                 <div className="flex items-center justify-between">
                     <div className='flex items-center space-x-4'>
                         <img src='/pp.png' alt={t('name')} 

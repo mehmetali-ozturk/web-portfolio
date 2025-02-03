@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import SideBar from './components/SideBar';
@@ -8,22 +8,39 @@ import ContactPage from './components/ContactPage';
 import ProjectsPage from './components/ProjectsPage';
 import MobileNav from './components/MobileNav';
 import { useTranslation } from 'react-i18next';
-import { FaTurkishLira, FaGlobeEurope } from 'react-icons/fa';
+import { FaSun, FaMoon } from 'react-icons/fa';
 import './i18n';
-
 
 function AppContent() {
   const location = useLocation();
   const { i18n } = useTranslation();
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    if (darkMode) {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+  };
 
   return (
-    <div className="min-h-screen h-full lg:m-10 m-5 lg:my-16 my-5 bg-white flex flex-col lg:flex-row pb-16 lg:pb-0">
-      <button 
-        onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'tr' : 'en')}
-        className="fixed top-1 right-2 z-50 p-2 bg-white rounded-lg div-shadow text-xs"
-      >
-        {i18n.language === 'en' ? 'TR' : 'EN'}
-      </button>
+    <div className={`min-h-screen h-full lg:m-10 m-5 lg:my-16 my-5 bg-white dark: flex flex-col lg:flex-row pb-16 lg:pb-0`}>
+      <div className="fixed top-4 right-4 z-50 flex space-x-2">
+        <button 
+          onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'tr' : 'en')}
+          className="p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg text-xs dark:text-white"
+        >
+          {i18n.language === 'en' ? 'TR' : 'EN'}
+        </button>
+        <button 
+          onClick={toggleDarkMode}
+          className="p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg "
+        >
+          {darkMode ? <FaSun className="text-yellow-500" /> : <FaMoon className="text-gray-500" />}
+        </button>
+      </div>
       <AnimatePresence mode="wait">
         <motion.div 
           key="sidebar"
@@ -31,13 +48,13 @@ function AppContent() {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -20 }}
           transition={{ duration: 0.5 }}
-          className="lg:max-w-s  lg:min-h-screen"
+          className="lg:max-w-s lg:min-h-screen"
         >
           <SideBar />
         </motion.div>
       </AnimatePresence>
 
-      <div className="flex-1 relative ">
+      <div className="flex-1 relative">
         <AnimatePresence mode="wait">
           <motion.div 
             key={location.pathname}
@@ -45,7 +62,7 @@ function AppContent() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="w-full"
+            className="w-full lg:mr-20"
           >
             <Routes location={location}>
               <Route path="/" element={<AboutMePage />} />

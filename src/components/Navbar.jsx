@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 const Navbar = () => {
     const { t } = useTranslation();
     return (
-        <nav className="hidden lg:flex max-w-min self-end bg-white p-4 rounded-xl">
+        <nav className="hidden lg:flex max-w-min self-end bg-white p-4 rounded-xl dark:text-white dark:bg-custom-gray transition-colors duration-300">
             <div className="flex justify-center space-x-12">
                 {[
                     { to: "/", text: "navbar.about" },
@@ -20,7 +20,7 @@ const Navbar = () => {
                         `text-m font-medium relative transition-colors duration-300
                         ${isActive 
                             ? 'text-custom-blue after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-custom-blue after:rounded-full after:transform after:transition-transform after:duration-300 after:origin-left' 
-                            : 'text-gray-600 hover:text-custom-blue hover:after:scale-x-100 after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-custom-blue after:rounded-full after:transform after:transition-transform after:duration-300 after:origin-left after:scale-x-0'
+                            : 'text-gray-600 hover:text-custom-blue hover:after:scale-x-100 after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-custom-blue after:rounded-full after:transform after:transition-transform after:duration-300 after:origin-left after:scale-x-0 dark:text-white dark:hover:text-custom-blue dark:after:bg-custom-blue '
                         }`
                     }
                 >
