@@ -20,7 +20,7 @@ function AppContent() {
     <div className="min-h-screen h-full lg:m-10 m-5 lg:my-16 my-5 bg-white flex flex-col lg:flex-row pb-16 lg:pb-0">
       <button 
         onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'tr' : 'en')}
-        className="fixed top-4 right-4 z-50 p-2 bg-white rounded-lg div-shadow"
+        className="fixed top-1 right-2 z-50 p-2 bg-white rounded-lg div-shadow text-xs"
       >
         {i18n.language === 'en' ? 'TR' : 'EN'}
       </button>

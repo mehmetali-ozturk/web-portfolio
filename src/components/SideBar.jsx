@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const InfoCard = ({ Icon, title, text }) => (
     <li className='flex items-center mb-8'>
-        <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-gray-100 rounded-lg mr-4 div-shadow-inset">
+        <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center  rounded-lg mr-4 ">
             <Icon className="text-lg text-custom-blue" />
         </div>
         <div className="w-48 overflow-hidden">
@@ -135,6 +135,7 @@ const SideBar = () => {
                         <a href="https://instagram.com/lahmacuncu.memo" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue transition-colors duration-300">
                             <FaInstagram size={24} />
                         </a>
+                        
                     </div>
                 </div>
             </div>
