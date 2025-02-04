@@ -4,11 +4,11 @@ import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaPhone, FaCalendar, FaMap
 import { motion, AnimatePresence } from 'framer-motion';
 
 const InfoCard = ({ Icon, title, text }) => (
-    <li className='flex items-center mb-8'>
+    <li className='flex items-center lg:mb-8'>
         <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center  rounded-lg mr-4 ">
             <Icon className="text-lg text-custom-blue" />
         </div>
-        <div className="w-48 overflow-hidden">
+        <div className="lg:w-48 max-w-fit overflow-hidden">
             <p className='text-sm text-gray-600 dark:text-gray-400'>{title}</p>
             <p className="text-sm text-gray-800 truncate dark:text-gray-200">{text}</p>
         </div>
@@ -86,7 +86,7 @@ const SideBar = () => {
                                         />
                                     ))}
                                 </ul>
-                                <div className="flex justify-center space-x-4 mt-4 pt-4 border-t border-custom-gray-2 dark:border-custom-gray-2 transition-colors duration-300">
+                                <div className="flex justify-center space-x-4 mt-4 pt-4 border-t border-gray-200 dark:border-custom-gray-2 transition-colors duration-300">
                                     <a href="https://www.linkedin.com/in/mehmet-ali-ozturk-" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue dark:text-gray-400 dark:hover:text-custom-blue transition-colors duration-300">
                                     <FaLinkedin size={24} />
                                     </a>

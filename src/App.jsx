@@ -30,13 +30,13 @@ function AppContent() {
       <div className="fixed top-4 right-4 z-50 flex space-x-2 bg-transparent transition-colors duration-300">
         <button 
           onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'tr' : 'en')}
-          className="p-2 bg-white dark:bg-custom-gray-2 rounded-lg shadow-lg text-xs dark:text-white transition-colors duration-300"
+          className="p-2 card dark:bg-custom-gray-2 dark:card-dark rounded-lg shadow-lg text-xs dark:text-white transition-colors duration-300"
         >
           {i18n.language === 'en' ? 'TR' : 'EN'}
         </button>
         <button 
           onClick={toggleDarkMode}
-          className="p-2 bg-white dark:bg-custom-gray-2 rounded-lg shadow-lg transition-colors duration-300"
+          className="p-2 card dark:bg-custom-gray-2 rounded-lg shadow-lg transition-colors duration-300"
         >
           {darkMode ? <FaSun className="text-yellow-500" /> : <FaMoon className="text-gray-500" />}
         </button>
