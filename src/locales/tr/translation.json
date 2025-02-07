@@ -46,19 +46,28 @@
         }
       }
     },
-    
-        "projects": {
-          "title": "Projeler",
-          "portfolioProject": {
-            "title": "Kişisel Portfolyo",
-            "description": "React ve Tailwind CSS kullanılarak oluşturulmuş, akıcı animasyonlar ve modern tasarım içeren responsive bir portfolyo web sitesi.",
-            "technologies": {
-              "react": "React",
-              "tailwind": "Tailwind CSS",
-              "framer": "Framer Motion"
-            }
-          }
-        }
+    "projects": {
+    "title": "Projeler",
+    "portfolioProject": {
+      "title": "Kişisel Portföy",
+      "description": "React ve Tailwind CSS kullanılarak oluşturulmuş, akıcı animasyonlar ve modern tasarım içeren responsive bir portföy sitesi.",
+      "technologies": {
+        "react": "React",
+        "tailwind": "Tailwind CSS",
+        "framer": "Framer Motion"
+      }
+    },
+    "hospitalProject": {
+      "title": "Hastane Randevu Sistemi",
+      "description": "Kullanıcı kimlik doğrulama, randevu planlama ve yönetici paneli içeren kapsamlı bir hastane randevu yönetim sistemi.",
+      "technologies": {
+        "react": "React",
+        "spring": "Spring Boot",
+        "mysql": "MySQL",
+        "jwt": "JWT Auth"
+      }
+    }
+  }
         ,"resume": {
     "title": "Özgeçmiş",
     "education": {

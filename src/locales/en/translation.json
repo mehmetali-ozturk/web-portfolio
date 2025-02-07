@@ -46,7 +46,7 @@
         "error": "Oops! Something went wrong. Please try again."
       }
     }
-  },  "projects": {
+  },"projects": {
     "title": "Projects",
     "portfolioProject": {
       "title": "Personal Portfolio",
@@ -55,6 +55,16 @@
         "react": "React",
         "tailwind": "Tailwind CSS",
         "framer": "Framer Motion"
+      }
+    },
+    "hospitalProject": {
+      "title": "Hospital Appointment System",
+      "description": "A comprehensive hospital appointment management system with user authentication, appointment scheduling, and admin dashboard.",
+      "technologies": {
+        "react": "React",
+        "spring": "Spring Boot",
+        "mysql": "MySQL",
+        "jwt": "JWT Auth"
       }
     }
   },
