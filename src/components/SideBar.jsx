@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import React, { useState } from 'react';
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaPhone, FaCalendar, FaMapMarkerAlt, FaInstagram, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaCalendar, FaMapMarkerAlt, FaInstagram, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const InfoCard = ({ Icon, title, text }) => (

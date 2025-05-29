@@ -6,19 +6,25 @@
       "whatImDoing": "Neler Yapıyorum",
       "skills": {
         "webDev": "Web Geliştirme",
+        "fullstack": "Full-Stack Geliştirme",
         "database": "Veritabanı Yönetimi",
-        "softwareDev": "Yazılım Geliştirme & Mimari",
+        "softwareDev": "Yazılım Geliştirme",
+        "userManagement": "Kullanıcı Yönetim Sistemleri",
+        "security": "Güvenlik ve Kimlik Doğrulama",
         "gameDev": "Oyun Geliştirme",
-        "testing": "Yazılım Testi",
-        "algorithms": "Algoritmalar & Problem Çözme"
+        "testing": "Test ve Kalite Güvence",
+        "algorithms": "Algoritmalar ve Veri Yapıları"
       },
       "skillDescriptions": {
-        "webDev": "Duyarlı ve kullanıcı dostu web siteleri ve web uygulamaları tasarlayıp geliştirme.",
-        "database": "Veritabanları tasarlama, optimize etme ve verimli veri işleme için SQL sorguları yazma.",
-        "softwareDev": "En iyi mimari uygulamaları kullanarak ölçeklenebilir yazılım çözümleri geliştirme.",
-        "gameDev": "Unity kullanarak ilgi çekici oyunlar oluşturma ve oynanışı optimize etme.",
-        "testing": "Uygulama kalitesini sağlamak ve hataları en aza indirmek için test stratejileri uygulama.",
-        "algorithms": "Performans ve ölçeklenebilirliğe odaklanan verimli algoritmalar tasarlama."
+        "webDev": "Modern framework'ler ve teknolojiler kullanarak responsive ve interaktif web uygulamaları geliştirme.",
+        "fullstack": "Next.js, TypeScript, Supabase ve Amazon S3 gibi bulut servislerini entegre ederek kapsamlı web uygulamaları oluşturma.",
+        "database": "Optimal performans için SQL ve NoSQL teknolojileri ile veritabanı tasarımı ve yönetimi.",
+        "softwareDev": "Çeşitli programlama dilleri ve en iyi uygulamalar kullanarak sağlam yazılım çözümleri geliştirme.",
+        "userManagement": "Kayıt, dashboard, iletişim araçları ve yönetim panelleri ile karmaşık çok kullanıcılı sistemler geliştirme.",
+        "security": "Web uygulamalarında güvenli kimlik doğrulama sistemleri, kullanıcı izinleri ve veri koruması uygulama.",
+        "gameDev": "Oyun motorları ve programlama framework'leri kullanarak interaktif oyunlar ve simülasyonlar oluşturma.",
+        "testing": "Kapsamlı test stratejileri ve otomatik test framework'leri ile kod kalitesini sağlama.",
+        "algorithms": "Verimli algoritmalar ve optimize edilmiş veri yapıları kullanarak karmaşık problemleri çözme."
       }
     },
     "contact": {
@@ -65,6 +71,17 @@
         "spring": "Spring Boot",
         "mysql": "MySQL",
         "jwt": "JWT Auth"
+      }
+    },
+    "westlaProject": {
+      "title": "Westla Online - Roleplay Yönetim Sistemi",
+      "description": "Kullanıcı kaydı, şikayet sistemi, personel dizini, kimlik doğrulama, dahili iletişim, yönetim paneli ve disiplin sistemi ile kapsamlı bir full-stack roleplay oyun yönetim sistemi.",
+      "technologies": {
+        "nextjs": "Next.js",
+        "typescript": "TypeScript",
+        "tailwind": "Tailwind CSS", 
+        "supabase": "Supabase",
+        "aws": "Amazon S3"
       }
     }
   }

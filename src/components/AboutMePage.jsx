@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaDesktop, FaCode, FaMobile, FaDatabase, FaGamepad, FaCogs, FaClipboardCheck, FaObjectGroup, FaBrain, FaSearch, FaJava, FaJsSquare, FaPhp, FaUnity, FaHtml5, FaGit } from 'react-icons/fa';
+import { FaDesktop, FaCode, FaDatabase, FaGamepad, FaClipboardCheck, FaBrain, FaCloud, FaUsers, FaShieldAlt } from 'react-icons/fa';
 import Navbar from './Navbar';
 import { useTranslation } from 'react-i18next';
 
@@ -20,31 +20,55 @@ const AboutMePage = () => {
 
     const skills = [
         {
+            id: 'web-dev',
             Icon: FaDesktop,
             title: t("about.skills.webDev"),
             description: t("about.skillDescriptions.webDev")
         },
         {
+            id: 'fullstack',
+            Icon: FaCloud,
+            title: t("about.skills.fullstack"),
+            description: t("about.skillDescriptions.fullstack")
+        },
+        {
+            id: 'database',
             Icon: FaDatabase,
             title: t("about.skills.database"),
             description: t("about.skillDescriptions.database")
         },
         {
+            id: 'software-dev',
             Icon: FaCode,
             title: t("about.skills.softwareDev"),
             description: t("about.skillDescriptions.softwareDev")
         },
         {
+            id: 'user-management',
+            Icon: FaUsers,
+            title: t("about.skills.userManagement"),
+            description: t("about.skillDescriptions.userManagement")
+        },
+        {
+            id: 'security',
+            Icon: FaShieldAlt,
+            title: t("about.skills.security"),
+            description: t("about.skillDescriptions.security")
+        },
+        {
+            id: 'game-dev',
             Icon: FaGamepad,
             title: t("about.skills.gameDev"),
             description: t("about.skillDescriptions.gameDev")
         },
         {
+            id: 'testing',
             Icon: FaClipboardCheck,
             title: t("about.skills.testing"),
             description: t("about.skillDescriptions.testing")
         },
         {
+            id: 'algorithms',
             Icon: FaBrain,
             title: t("about.skills.algorithms"),
             description: t("about.skillDescriptions.algorithms")
@@ -69,10 +93,10 @@ const AboutMePage = () => {
             
             <div className='mt-5'>
                 <h1 className='text-3xl font-bold m-2 dark:text-white'>{t("about.whatImDoing")}</h1>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
-                    {skills.map((skill, index) => (
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8">
+                    {skills.map((skill) => (
                         <SkillCard 
-                            key={index}
+                            key={skill.id}
                             Icon={skill.Icon}
                             title={skill.title}
                             description={skill.description}
