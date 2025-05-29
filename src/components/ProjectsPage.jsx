@@ -60,7 +60,7 @@ const ProjectsPage = () => {
         t('projects.portfolioProject.technologies.framer')
       ],
       githubUrl: "https://github.com/mehmetali-ozturk/web-portfolio",
-      liveUrl: "https://memedali.live/"
+      liveUrl: "https://mehmetali.tech/"
     },
     {
       id: 'westla-project',
