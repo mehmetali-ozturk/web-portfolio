@@ -4,13 +4,13 @@ import Navbar from './Navbar';
 import { useTranslation } from 'react-i18next';
 
 const SkillCard = ({ Icon, title, description }) => (
-    <div className='flex items-center p-6 rounded-lg bg-white hover:bg-gray-50 card transition-all duration-300 dark:bg-custom-gray'>
-        <div className="min-w-[60px] mr-6">
-            <Icon className="text-4xl text-custom-blue hover:text-gray-700 transition-colors duration-300" />
+    <div className='flex items-center p-4 rounded-lg bg-white hover:bg-gray-50 card transition-all duration-300 dark:bg-custom-gray'>
+        <div className="min-w-[45px] mr-4">
+            <Icon className="text-2xl text-custom-blue hover:text-gray-700 transition-colors duration-300" />
         </div>
         <div>
-            <h2 className='text-lg font-bold mb-2 dark:text-white'>{title}</h2>
-            <p className='text-sm font-medium text-gray-800 dark:text-white'>{description}</p>
+            <h2 className='text-base font-bold mb-1 dark:text-white'>{title}</h2>
+            <p className='text-xs font-medium text-gray-800 dark:text-white'>{description}</p>
         </div>
     </div>
 );
@@ -78,22 +78,22 @@ const AboutMePage = () => {
     return (
         <div className="base-container dark:bg-custom-gray transition-colors duration-300">
             <div className='flex justify-between'>
-                <p className='lg:text-4xl text-3xl font-bold text-shadow-xl mt-3 dark:text-white'>{t("about.title")}</p>
+                <p className='lg:text-2xl text-xl font-bold text-shadow-xl mt-2 dark:text-white'>{t("about.title")}</p>
                 <Navbar />
             </div>
             <div>
-                <div className='w-10 h-1.5 mb-4 mt-6 bg-custom-blue rounded'></div>
-                <p className='py-1 mb-2 text-shadow-lg text-sm lg:text-lg dark:text-white'>
+                <div className='w-8 h-1 mb-3 mt-4 bg-custom-blue rounded'></div>
+                <p className='py-1 mb-2 text-shadow-lg text-xs lg:text-sm dark:text-white'>
                     {t("about.description1")}
                 </p>
-                <p className='py-1 mb-2 text-shadow-lg text-sm lg:text-lg dark:text-white'>
+                <p className='py-1 mb-2 text-shadow-lg text-xs lg:text-sm dark:text-white'>
                     {t("about.description2")}
                 </p>
             </div>
             
-            <div className='mt-5'>
-                <h1 className='text-3xl font-bold m-2 dark:text-white'>{t("about.whatImDoing")}</h1>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8">
+            <div className='mt-4'>
+                <h1 className='text-xl font-bold m-2 dark:text-white'>{t("about.whatImDoing")}</h1>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-5">
                     {skills.map((skill) => (
                         <SkillCard 
                             key={skill.id}

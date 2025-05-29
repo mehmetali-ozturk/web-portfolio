@@ -102,10 +102,12 @@
         "title": "Programming Languages",
         "skills": {
           "react": "React",
+          "nextjs": "Next.js", 
+          "typescript": "TypeScript",
           "htmlCss": "HTML/CSS",
           "java": "Java",
           "javascript": "JavaScript",
-          "c": "C"
+          "c": "C/C++"
         }
       },
       "otherSkills": {
@@ -114,7 +116,9 @@
           "git": "Git",
           "sql": "SQL",
           "tailwind": "Tailwind CSS",
-          "nodejs": "Node.js"
+          "nodejs": "Node.js",
+          "supabase": "Supabase",
+          "aws": "Amazon S3"
         }
       }
     },

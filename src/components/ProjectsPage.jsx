@@ -5,16 +5,16 @@ import { useTranslation } from 'react-i18next';
 
 const Project = ({ title, description, technologies, githubUrl, liveUrl }) => {
   return (
-    <div className="p-6 rounded-lg dark:text-white transition-theme card dark:bg-custom-gray">
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4 dark:text-gray-300 transition-theme">
+    <div className="p-4 rounded-lg dark:text-white transition-theme card dark:bg-custom-gray">
+      <h3 className="text-lg font-semibold mb-2">{title}</h3>
+      <p className="text-gray-600 mb-3 text-sm dark:text-gray-300 transition-theme">
         {description}
       </p>
-      <div className="flex flex-wrap gap-2 mb-4">
+      <div className="flex flex-wrap gap-1 mb-3">
         {technologies.map((tech, index) => (
           <span 
             key={`tech-${index}-${tech}`}
-            className="px-3 py-1 text-sm bg-gray-100 rounded-full text-gray-700 dark:bg-custom-gray-2 dark:text-gray-300 transition-theme"
+            className="px-2 py-1 text-xs bg-gray-100 rounded-full text-gray-700 dark:bg-custom-gray-2 dark:text-gray-300 transition-theme"
           >
             {tech}
           </span>
@@ -28,7 +28,7 @@ const Project = ({ title, description, technologies, githubUrl, liveUrl }) => {
           className="text-custom-blue hover:text-gray-600 dark:hover:text-gray-300 transition-theme"
           aria-label="GitHub repository"
         >
-          <FaGithub size={20} />
+          <FaGithub size={18} />
         </a>
         {liveUrl && (
           <a 
@@ -38,7 +38,7 @@ const Project = ({ title, description, technologies, githubUrl, liveUrl }) => {
             className="text-custom-blue hover:text-gray-600 dark:hover:text-gray-300 transition-theme"
             aria-label="Live demo"
           >
-            <FaExternalLinkAlt size={20} />
+            <FaExternalLinkAlt size={18} />
           </a>
         )}
       </div>
@@ -81,12 +81,12 @@ const ProjectsPage = () => {
   return (
     <div className="base-container dark:bg-custom-gray transition-theme">
       <div className='flex justify-between dark:text-white transition-theme'>
-        <h1 className="text-4xl font-bold mt-3 text-shadow-xl">{t('projects.title')}</h1>
+        <h1 className="text-2xl font-bold mt-2 text-shadow-xl">{t('projects.title')}</h1>
         <Navbar />
       </div>
-      <div className='w-10 h-1.5 mb-4 mt-6 bg-custom-blue rounded'></div>
+      <div className='w-8 h-1 mb-3 mt-4 bg-custom-blue rounded'></div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
         {projects.map((project) => (
           <Project 
             key={project.id}

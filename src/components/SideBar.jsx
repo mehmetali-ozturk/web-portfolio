@@ -4,13 +4,13 @@ import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaCalendar, FaMapMarkerAlt, 
 import { motion, AnimatePresence } from 'framer-motion';
 
 const InfoCard = ({ Icon, title, text }) => (
-    <li className='flex items-center lg:mb-8'>
-        <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center  rounded-lg mr-4 ">
-            <Icon className="text-lg text-custom-blue" />
+    <li className='flex items-center lg:mb-5'>
+        <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg mr-3">
+            <Icon className="text-base text-custom-blue" />
         </div>
-        <div className="lg:w-48 max-w-fit overflow-hidden">
-            <p className='text-sm text-gray-600 dark:text-gray-400'>{title}</p>
-            <p className="text-sm text-gray-800 truncate dark:text-gray-200">{text}</p>
+        <div className="lg:w-40 max-w-fit overflow-hidden">
+            <p className='text-xs text-gray-600 dark:text-gray-400'>{title}</p>
+            <p className="text-xs text-gray-800 truncate dark:text-gray-200">{text}</p>
         </div>
     </li>
 );
@@ -18,7 +18,6 @@ const InfoCard = ({ Icon, title, text }) => (
 const SideBar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { t } = useTranslation();
-    
     
     const contactInfo = [
         {
@@ -46,14 +45,14 @@ const SideBar = () => {
     return (
         <>
             {/* Mobile View */}
-            <div className="lg:hidden w-full bg-white div-shadow rounded-2xl border-gray-300 p-4 mb-5 dark:bg-custom-gray transition-colors duration-300 ">
+            <div className="lg:hidden w-full bg-white div-shadow rounded-2xl border-gray-300 p-3 mb-4 dark:bg-custom-gray transition-colors duration-300">
                 <div className="flex items-center justify-between">
-                    <div className='flex items-center space-x-4'>
+                    <div className='flex items-center space-x-3'>
                         <img src='/pp.png' alt={t('name')} 
-                            className="w-16 h-16 rounded-2xl bg-gray-100 p-2 dark:bg-custom-gray-2 transition-colors duration-300 " />
+                            className="w-12 h-12 rounded-xl bg-gray-100 p-2 dark:bg-custom-gray-2 transition-colors duration-300" />
                         <div>
-                            <h1 className="text-xl font-bold dark:text-white transition-colors duration-300">{t('personalInfo.name')}</h1>
-                            <p className="text-sm bg-gray-100 rounded-lg px-3 py-1 mt-1 max-w-max dark:bg-cusstom-gray-2 dark:text-white dark:bg-custom-gray-2 transition-colors duration-300">{t('personalInfo.title')}</p>
+                            <h1 className="text-lg font-bold dark:text-white transition-colors duration-300">{t('personalInfo.name')}</h1>
+                            <p className="text-xs bg-gray-100 rounded-lg px-2 py-1 mt-1 max-w-max dark:bg-custom-gray-2 dark:text-white transition-colors duration-300">{t('personalInfo.title')}</p>
                         </div>
                     </div>
                     <button 
@@ -64,8 +63,6 @@ const SideBar = () => {
                     </button>
                 </div>
                 
-                {/* Mobile Dropdown */}
-                
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div 
@@ -75,8 +72,8 @@ const SideBar = () => {
                             transition={{ duration: 0.5 }}
                             className="overflow-hidden"
                         >
-                            <div className="mt-4 border-t pt-4 dark:border-custom-gray-2 transition-colors duration-300">
-                                <ul className="space-y-4">
+                            <div className="mt-3 border-t pt-3 dark:border-custom-gray-2 transition-colors duration-300">
+                                <ul className="space-y-3">
                                     {contactInfo.map((info, index) => (
                                         <InfoCard 
                                             key={index}
@@ -86,15 +83,15 @@ const SideBar = () => {
                                         />
                                     ))}
                                 </ul>
-                                <div className="flex justify-center space-x-4 mt-4 pt-4 border-t border-gray-200 dark:border-custom-gray-2 transition-colors duration-300">
+                                <div className="flex justify-center space-x-4 mt-3 pt-3 border-t border-gray-200 dark:border-custom-gray-2 transition-colors duration-300">
                                     <a href="https://www.linkedin.com/in/mehmet-ali-ozturk-" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue dark:text-gray-400 dark:hover:text-custom-blue transition-colors duration-300">
-                                    <FaLinkedin size={24} />
+                                        <FaLinkedin size={20} />
                                     </a>
                                     <a href="https://github.com/mehmetali-ozturk" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue dark:text-gray-400 dark:hover:text-custom-blue transition-colors duration-300">
-                                        <FaGithub size={24} />
+                                        <FaGithub size={20} />
                                     </a>
                                     <a href="https://instagram.com/lahmacuncu.memo" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue dark:text-gray-400 dark:hover:text-custom-blue transition-colors duration-300">
-                                        <FaInstagram size={24} />
+                                        <FaInstagram size={20} />
                                     </a>
                                 </div>
                             </div>
@@ -104,13 +101,13 @@ const SideBar = () => {
             </div>
 
             {/* Desktop View */}
-            <div className="hidden lg:flex h-auto max-w-min flex-col bg-white text-black div-shadow rounded-2xl border-gray-300 p-8 font-poppins mr-7 dark:bg-custom-gray transition-colors duration-300">
+            <div className="hidden lg:flex h-auto max-w-min flex-col bg-white text-black div-shadow rounded-2xl border-gray-300 p-6 font-poppins mr-6 dark:bg-custom-gray transition-colors duration-300">
                 <div className="flex flex-col items-center">
-                    <img src='/pp.png' alt="Mehmet Ali Öztürk" className="w-40 h-40 rounded-3xl mt-10 my-7 bg-gray-100 p-3 dark:bg-custom-gray-2 transition-colors duration-300" />
-                    <h1 className="text-2xl font-bold mb-5 text-center dark:text-white transition-colors duration-300">Mehmet Ali Öztürk</h1>
-                    <p className="text-sm rounded-lg p-1 px-4 bg-gray-100 mb-0 dark:bg-custom-gray-2 dark:text-white transition-colors duration-300">{t('personalInfo.title')}</p>
+                    <img src='/pp.png' alt="Mehmet Ali Öztürk" className="w-32 h-32 rounded-2xl mt-6 my-5 bg-gray-100 p-2 dark:bg-custom-gray-2 transition-colors duration-300" />
+                    <h1 className="text-xl font-bold mb-3 text-center dark:text-white transition-colors duration-300">Mehmet Ali Öztürk</h1>
+                    <p className="text-xs rounded-lg p-1 px-3 bg-gray-100 mb-0 dark:bg-custom-gray-2 dark:text-white transition-colors duration-300">{t('personalInfo.title')}</p>
                     
-                    <div className='w-full h-0.5 m-10 bg-gray-200 dark:bg-custom-gray-2 transition-colors duration-300'></div>
+                    <div className='w-full h-0.5 m-6 bg-gray-200 dark:bg-custom-gray-2 transition-colors duration-300'></div>
                     
                     <ul className="w-full">
                         {contactInfo.map((info, index) => (
@@ -123,19 +120,18 @@ const SideBar = () => {
                         ))}
                     </ul>
 
-                    <div className='w-full h-0.5 m-10 bg-gray-200 dark:bg-custom-gray-2 transition-colors duration-300'></div>
+                    <div className='w-full h-0.5 m-6 bg-gray-200 dark:bg-custom-gray-2 transition-colors duration-300'></div>
                     
                     <div className="flex justify-around w-full transition-colors duration-300">
                         <a href="https://www.linkedin.com/in/mehmet-ali-ozturk-" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue dark:text-gray-400 dark:hover:text-custom-blue transition-colors duration-300">
-                            <FaLinkedin size={24} />
+                            <FaLinkedin size={20} />
                         </a>
                         <a href="https://github.com/mehmetali-ozturk" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue dark:text-gray-400 dark:hover:text-custom-blue transition-colors duration-300">
-                            <FaGithub size={24} />
+                            <FaGithub size={20} />
                         </a>
                         <a href="https://instagram.com/lahmacuncu.memo" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-custom-blue dark:text-gray-400 dark:hover:text-custom-blue transition-colors duration-300">
-                            <FaInstagram size={24} />
+                            <FaInstagram size={20} />
                         </a>
-                        
                     </div>
                 </div>
             </div>
