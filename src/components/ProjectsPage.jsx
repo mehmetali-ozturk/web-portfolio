@@ -63,6 +63,20 @@ const ProjectsPage = () => {
       liveUrl: "https://mehmetali.tech/"
     },
     {
+      id: 'nullsect-project',
+      title: t('projects.nullsectProject.title'),
+      description: t('projects.nullsectProject.description'),
+      technologies: [
+        t('projects.nullsectProject.technologies.react'),
+        t('projects.nullsectProject.technologies.typescript'),
+        t('projects.nullsectProject.technologies.tailwind'),
+        t('projects.nullsectProject.technologies.router'),
+        t('projects.nullsectProject.technologies.responsive')
+      ],
+      githubUrl: "https://github.com/mehmetali-ozturk/nullsect",
+      liveUrl: "https://nullsect.vercel.app/"
+    },
+    {
       id: 'westla-project',
       title: t('projects.westlaProject.title'),
       description: t('projects.westlaProject.description'),

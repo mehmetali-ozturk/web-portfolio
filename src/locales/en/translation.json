@@ -64,6 +64,17 @@
         "framer": "Framer Motion"
       }
     },
+    "nullsectProject": {
+      "title": "NullSect - FiveM Script Development Platform",
+      "description": "A professional platform providing custom script development, modification, and technical support services for FiveM server owners. Built with modern web technologies featuring responsive design and gaming industry-focused UI/UX.",
+      "technologies": {
+        "react": "React.js",
+        "typescript": "TypeScript",
+        "tailwind": "Tailwind CSS",
+        "router": "React Router",
+        "responsive": "Responsive Design"
+      }
+    },
     "hospitalProject": {
       "title": "Hospital Appointment System",
       "description": "A comprehensive hospital appointment management system with user authentication, appointment scheduling, and admin dashboard.",
